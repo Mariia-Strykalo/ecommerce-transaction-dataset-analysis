@@ -1,4 +1,4 @@
-# Ecommerce Transaction Dataset Analysis
+# E-commerce Transaction Dataset Analysis
 
 ## Description
 This project analyzes e-commerce transaction data using Python and its embedded libraries.
