@@ -1,8 +1,5 @@
 # Ecommerce Transaction Dataset Analysis
 
-## Video Demo:
-{URL}
-
 ## Description
 This project analyzes e-commerce transaction data using Python and its embedded libraries.
 The goal is to demonstrate basic data analysis logic, data aggregation, and reporting without external data analysis libraries.
