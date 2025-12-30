@@ -11,10 +11,32 @@ def main():
     summary = aggregate_by_category(data)
     analysis = analyze_purchase_patterns(data, summary)
     report = format_table(summary, analysis)
-    print(report)
 
-    with open("report.txt", "w") as file:
-        file.write(report)
+    while True:
+        choice = menu()
+
+        if choice == "1":
+            show_average_purchase(analysis)
+
+        elif choice == "2":
+            show_category_summary(summary)
+
+        elif choice == "3":
+            show_top_categories(analysis)
+
+        elif choice == "4":
+            show_top_spenders(analysis)
+
+        elif choice == "5":
+            with open("report.txt", "w") as f:
+                f.write(report)
+            print("\nReport saved to report.txt")
+
+        elif choice == "6":
+            break
+
+        else:
+            print("Invalid choice, try again.")
 
 
 
@@ -114,6 +136,40 @@ def analyze_purchase_patterns(data: list[dict], summary: dict):
     }
 
 
+def show_average_purchase(analysis):
+    print(f"\nAverage purchase amount: ${analysis['average_purchase']:.2f}")
+
+
+def show_category_summary(summary):
+    print("\nSales by Category:")
+    print("-" * 30)
+    for category, stats in summary.items():
+        print(
+            f"{category:15} | "
+            f"Count: {stats['count']:5} | "
+            f"Total: ${stats['total_amount']:.2f}"
+        )
+
+def show_top_categories(analysis):
+    print("\nTop Categories by Average Purchase:")
+    print("-" * 30)
+    for category, stats in analysis["top_categories"]:
+        print(
+            f"{category:15} | Average purchase: ${stats['average_amount']:.2f}"
+        )
+
+def show_top_spenders(analysis):
+    print("\nTop Large Purchases Among the Youngest Users:")
+    print("-" * 30)
+    for row in analysis["top_big_purchases_by_youngest_user"]:
+        print(f"{row['user']} ({row['age']} y.o.) - ${row['amount']:.2f}")
+
+    print("\nTop Large Purchases Among the Oldest Users:")
+    print("-" * 30)
+    for row in analysis["top_big_purchases_by_oldest_users"]:
+        print(f"{row['user']} ({row['age']} y.o.) - ${row['amount']:.2f}")
+
+
 def format_table(summary: dict, analysis: dict):
     lines = []
 
@@ -165,6 +221,17 @@ def format_table(summary: dict, analysis: dict):
         )
 
     return "\n".join(lines)
+
+
+def menu():
+    print("\nChoose an option:")
+    print("1 - Show average purchase per all transactions")
+    print("2 - Show category summary")
+    print("3 - Show top categories by average purchase")
+    print("4 - Show top spenders")
+    print("5 - Save full report to file")
+    print("6 - Exit")
+    return input("Your choice: ")
 
 
 if __name__ == "__main__":
