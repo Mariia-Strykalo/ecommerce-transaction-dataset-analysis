@@ -33,16 +33,6 @@ The program provides an interactive menu that allows the user to choose which an
 
 This interactive approach allows the user to explore the dataset step by step instead of viewing all results at once.
 
-Project Structure:
-project/
-│
-├── project.py
-├── test_project.py
-├── ecommerce_transactions.csv
-├── report.txt
-├── requirements.txt
-└── README.md
-
 Future improvements may include demographic analysis such as more detailded age / country-based purchasing patterns, defining top 5 customer who made the biggest purchases accross all categories. Defining most popular payment method.
 
 ### How to Run:
