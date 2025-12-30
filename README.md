@@ -1,7 +1,7 @@
 # E-commerce Transaction Dataset Analysis
 
 ## Video Demo:
-https://youtu.be/qpRjwJy3dAw (The project was later extended with an interactive menu interface after the video demo was recorded.)
+https://youtu.be/qpRjwJy3dAw 
 
 ## Description
 This project analyzes e-commerce transaction data using Python and its embedded libraries.
@@ -17,7 +17,7 @@ The dataset used in this project is synthetic and was created as an educational 
 - Payment method
 - Transaction date
 
-The project is structured around several агтсешщті responsible for a specific task.
+The project is structured around several functions responsible for a specific task.
 The load_csv function reads the CSV file and converts each valid row into a dictionary representing a single transaction. This function also handles basic error checking, such as empty rows or invalid data types.
 The aggregate_by_category function groups transactions by product category and calculates the total number of purchases, total amount of purchaces, and average purchase value for each category. This aggregated data is reused in later analysis steps.
 The analyze_purchase_patterns function calculates the overall average purchase amount, identifies the top five categories by average purchase value, and finds extreme cases such as the largest purchases made by the youngest and oldest users.
@@ -31,7 +31,7 @@ The program provides an interactive menu that allows the user to choose which an
 - Viewing top spenders among the youngest and oldest users
 - Saving a full formatted analysis report to a text file
 
-This interactive approach allows the user to explore the dataset step by step instead of viewing all results at once.
+This interactive approach allows the user to explore the dataset step by step instead of viewing all results at once (the project was extended with an interactive menu interface after the video demo was recorded).
 
 Future improvements may include demographic analysis such as more detailded age / country-based purchasing patterns, defining top 5 customer who made the biggest purchases accross all categories. Defining most popular payment method.
 
