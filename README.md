@@ -1,6 +1,5 @@
 # E-commerce Transaction Dataset Analysis
-Final Project for CS50's Introduction to Programming with Python
-🔗 Certificate: https://certificates.cs50.io/d9ca3c8f-411a-4b0c-9147-783aac4e62d8.pdf
+Final Project for CS50's Introduction to Programming with Python (certificate: https://certificates.cs50.io/d9ca3c8f-411a-4b0c-9147-783aac4e62d8.pdf)
 
 ## Video Demo:
 https://youtu.be/qpRjwJy3dAw 
