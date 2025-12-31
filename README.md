@@ -1,4 +1,5 @@
 # E-commerce Transaction Dataset Analysis
+Final Project for CS50P (CS50’s Introduction to Programming with Python)
 
 ## Video Demo:
 https://youtu.be/qpRjwJy3dAw 
